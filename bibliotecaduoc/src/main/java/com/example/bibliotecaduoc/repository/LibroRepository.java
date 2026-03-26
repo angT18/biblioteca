@@ -58,7 +58,7 @@ public class LibroRepository {
         libro1.setId(id);
         libro1.setTitulo(lib.getTitulo());
         libro1.setAutor(lib.getAutor());
-        libro1.setFechapublicacion(lib.getFechapublicacion());
+        libro1.setFechaPublicacion(lib.getFechaPublicacion());
         libro1.setEditorial(lib.getEditorial());
         libro1.setIsbn(lib.getIsbn());
 
