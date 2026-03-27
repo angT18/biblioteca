@@ -39,4 +39,14 @@ public class LibroController {
     public String eliminaLibro(@PathVariable int id) {
         return libroService.deleteLibro(id);
     }
+
+    @GetMapping("/total")
+    public int totalLibrosV2() {
+        return libroService.totalLibrosV2();
+    }
+
+    @GetMapping("/{isbn}")
+    public Libro buscLibro(@PathVariable String isbn) {
+        return libroService.getLibroIsbn(isbn);
+    }
 }
