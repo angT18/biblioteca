@@ -69,4 +69,9 @@ public class LibroController {
     public Libro buscarMasNuevo() {
         return libroService.getLibroMasNuevo();
     }
+
+    @GetMapping("/orden")
+    public List<Libro> ordenaLibros() {
+        return libroService.ordenarLibros();
+    }
 }

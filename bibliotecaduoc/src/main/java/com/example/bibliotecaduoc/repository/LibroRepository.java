@@ -4,6 +4,7 @@ import com.example.bibliotecaduoc.model.Libro;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Repository
@@ -106,6 +107,13 @@ public class LibroRepository {
         }
         return nuevo;
     }
+
+    public List<Libro> ordenarLibros(){
+         listaLibros.sort(Comparator.comparing(Libro::getFechaPublicacion));
+         return listaLibros;
+    }
+
+
 
     public Libro guardar(Libro lib) {
         listaLibros.add(lib);

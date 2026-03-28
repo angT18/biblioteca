@@ -59,4 +59,8 @@ public class LibroService {
     public Libro getLibroMasNuevo() {
         return libroRepository.buscarMasNuevo();
     }
+
+    public List<Libro> ordenarLibros() {
+        return libroRepository.ordenarLibros();
+    }
 }
