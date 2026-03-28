@@ -43,4 +43,8 @@ public class LibroService {
     public Libro getLibroIsbn(String isbn) {
         return libroRepository.buscarPorIsbn(isbn);
     }
+
+    public Libro getLibroAutor(String autor) {
+        return libroRepository.buscarPorAutor(autor);
+    }
 }

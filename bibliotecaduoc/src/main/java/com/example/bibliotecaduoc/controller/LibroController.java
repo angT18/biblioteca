@@ -45,8 +45,13 @@ public class LibroController {
         return libroService.totalLibrosV2();
     }
 
-    @GetMapping("/{isbn}")
+    @GetMapping("/isbn/{isbn}")
     public Libro buscLibro(@PathVariable String isbn) {
         return libroService.getLibroIsbn(isbn);
+    }
+
+    @GetMapping("/autor/{autor}")
+    public Libro buscLibroAutor(@PathVariable String autor) {
+        return libroService.getLibroAutor(autor);
     }
 }
