@@ -67,6 +67,16 @@ public class LibroRepository {
         return null;
     }
 
+    ///
+    public Libro buscarPorAnio(int fechaPublicacion) {
+        for (Libro libro : listaLibros) {
+            if (libro.getFechaPublicacion() == fechaPublicacion) {
+                return libro;
+            }
+        }
+        return null;
+    }
+
     public Libro guardar(Libro lib) {
         listaLibros.add(lib);
         return lib;
