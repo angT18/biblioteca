@@ -51,4 +51,12 @@ public class LibroService {
     public Libro getLibroAnio(int fechaPublicacion) {
         return libroRepository.buscarPorAnio(fechaPublicacion);
     }
+
+    public Libro getLibroMasAntiguo() {
+        return libroRepository.buscarMasAntiguo();
+    }
+
+    public Libro getLibroMasNuevo() {
+        return libroRepository.buscarMasNuevo();
+    }
 }

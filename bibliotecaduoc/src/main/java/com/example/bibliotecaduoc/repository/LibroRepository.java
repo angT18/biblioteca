@@ -77,6 +77,36 @@ public class LibroRepository {
         return null;
     }
 
+    public Libro buscarMasAntiguo() {
+        if (listaLibros.isEmpty()) {
+            return null;
+        }
+
+        Libro antiguo = listaLibros.get(0);
+
+        for (Libro libro : listaLibros) {
+            if (libro.getFechaPublicacion() < antiguo.getFechaPublicacion()) {
+                antiguo = libro;
+            }
+        }
+        return antiguo;
+    }
+
+    public Libro buscarMasNuevo() {
+        if (listaLibros.isEmpty()) {
+            return null;
+        }
+
+        Libro nuevo = listaLibros.get(0);
+
+        for (Libro libro : listaLibros) {
+            if (libro.getFechaPublicacion() > nuevo.getFechaPublicacion()) {
+                nuevo = libro;
+            }
+        }
+        return nuevo;
+    }
+
     public Libro guardar(Libro lib) {
         listaLibros.add(lib);
         return lib;
@@ -130,8 +160,9 @@ public class LibroRepository {
         listaLibros.removeIf(x -> x.getId() == id);
     }
 
+
+
     public int totalLibros() {
         return listaLibros.size();
     }
-
 }

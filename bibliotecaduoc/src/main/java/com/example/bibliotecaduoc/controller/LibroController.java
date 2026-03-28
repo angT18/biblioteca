@@ -59,4 +59,14 @@ public class LibroController {
     public Libro buscarPorAnio(@PathVariable int fechaPublicacion) {
         return libroService.getLibroAnio(fechaPublicacion);
     }
+
+    @GetMapping("/antiguo")
+    public Libro buscarMasAntiguo() {
+        return libroService.getLibroMasAntiguo();
+    }
+
+    @GetMapping("/nuevo")
+    public Libro buscarMasNuevo() {
+        return libroService.getLibroMasNuevo();
+    }
 }
